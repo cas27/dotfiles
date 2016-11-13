@@ -1,0 +1,4 @@
+[tasks.common]
+  links = [
+    [".gitconfig"]
+  ]
