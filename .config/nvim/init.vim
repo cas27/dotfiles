@@ -31,6 +31,7 @@ NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'powerman/vim-plugin-AnsiEsc'
 NeoBundle 'cespare/vim-toml'
+NeoBundle 'chrisbra/Colorizer'
 
 
 " Required:
