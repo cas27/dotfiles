@@ -10,7 +10,8 @@
 [tasks.desktop]
   deps = ["common", "asdf"]
   links = [
-    [".config/i3", ".config/i3-desktop"]
+    [".config/i3", ".config/i3-desktop"],
+    [".asdfrc"]
   ]
   
 [tasks.common]
