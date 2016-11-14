@@ -78,6 +78,7 @@ set wrapscan "search from top when hit bottom
 set cursorline
 colorscheme molokai
 let mapleader = " "
+hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
 "Restore cursor to file position in previous editing session
 ""http://vim.wikia.com/wiki/Restore_cursor_to_file_position_in_previous_editing_session

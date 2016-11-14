@@ -4,8 +4,11 @@
 [macros.install__ubuntu]
   prefix = ["sudo", "apt-get", "install", "-y"]
 
+[macros.clone]
+  prefix = ["git", "clone"]
+
 [tasks.desktop]
-  deps = ["common"]
+  deps = ["common", "asdf"]
   links = [
     [".config/i3", ".config/i3-desktop"]
   ]
@@ -23,10 +26,14 @@
   rejects = [["which", "nvim"]]
   cmds = [["@install", "neovim"]]
 
+[tasks.asdf]
+  rejects = [["which", "asdf"]]
+  ["@clone", "git://github.com/asdf-vm/asdf.git", "~/.asdf"]
+
 [tasks.zsh]
   rejects = [["which", "zsh"]]
   cmds = [
     ["@install", "zsh"], 
     ["chsh", "-s", "/usr/bin/zsh"],
-    ["git", "clone", "git://github.com/robbyrussell/oh-my-zsh.git", "~/.oh-my-zsh"]
+    ["@clone", "git://github.com/robbyrussell/oh-my-zsh.git", "~/.oh-my-zsh"]
   ]
