@@ -1,6 +1,17 @@
+[macros.install__arch]
+  prefix = ["sudo", "pacman", "-S"]
+
+[macros.install__ubuntu]
+  prefix = ["sudo", "apt-get", "install", "-y"]
+  
 [tasks.common]
+  deps = ["neovim"]
   links = [
     [".config/nvim"],
     [".gitconfig"],
     [".gitignore"]
   ]
+
+[tasks.neovim]
+  rejects = [["which", "nvim"]]
+  cmds = [["@install", "neovim"]]
