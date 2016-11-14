@@ -65,6 +65,9 @@ let g:deoplete#enable_at_startup = 1
 inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
 inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
 
+" Neovim Conf
+set termguicolors
+
 syntax on
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set number
