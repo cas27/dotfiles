@@ -14,3 +14,4 @@ NeoBundleLock vim-elixir e38d63ce5bf82d7cb807053fe8548fee34b84863
 NeoBundleLock vim-fugitive b3a8be6975dcc27b523b030bf5d35d9c737aef18
 NeoBundleLock vim-plugin-AnsiEsc f2df795e886809dc08a554ed2d0802c620460de3
 NeoBundleLock vim-snippets 89a4e548441debc2d54267ea6088b048a29273de
+NeoBundleLock vim-toml f6f79f3cc6740dfacca73a195857cbc45e778912
