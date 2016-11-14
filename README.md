@@ -1,0 +1,13 @@
+# Mah Dots
+
+My dotfiles managed by [Homemaker](https://github.com/FooSoft/homemaker)
+
+# Installation
+
+`tar zvcf homemaker_linux_amd64.tar.gz`
+Copy the binary to your path
+Clone this repo and enter the directory
+
+# Usage
+
+`homemaker -verbose -task=common -variant=arch overlord.toml .`
