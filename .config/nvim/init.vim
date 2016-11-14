@@ -29,6 +29,7 @@ call dein#add('honza/vim-snippets')
 call dein#add('powerman/vim-plugin-AnsiEsc')
 call dein#add('cespare/vim-toml')
 call dein#add('chrisbra/Colorizer')
+call dein#add('ryanoasis/vim-devicons')
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently install them.
@@ -82,6 +83,7 @@ set cursorline
 colorscheme molokai
 let mapleader = " "
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
 
 "Restore cursor to file position in previous editing session
 ""http://vim.wikia.com/wiki/Restore_cursor_to_file_position_in_previous_editing_session
