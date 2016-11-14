@@ -3,6 +3,12 @@
 
 [macros.install__ubuntu]
   prefix = ["sudo", "apt-get", "install", "-y"]
+
+[tasks.desktop]
+  deps = ["common"]
+  links = [
+    [".config/i3", ".config/i3-desktop"]
+  ]
   
 [tasks.common]
   deps = ["neovim", "zsh"]

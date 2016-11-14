@@ -10,4 +10,4 @@ Clone this repo and enter the directory
 
 # Usage
 
-`homemaker -verbose -task=common -variant=arch overlord.toml .`
+`homemaker -verbose -task=desktop -variant=arch overlord.toml .`
