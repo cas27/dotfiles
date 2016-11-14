@@ -1,49 +1,49 @@
 set nocompatible
 filetype off
 
-"NeoBundle Scripts-----------------------------
-if has('vim_starting')
-  " Required:
-  set runtimepath+=/home/corys/.config/nvim/bundle/neobundle.vim/
+"Setup dein  ---------------------------------------------------------------
+if (!isdirectory(expand("$HOME/.config/nvim/bundle/dein.vim")))
+  call system(expand("git clone https://github.com/Shougo/dein.vim $HOME/.config/nvim/bundle/dein.vim"))
+endif
+
+set runtimepath+=~/.config/nvim/bundle/dein.vim/
+" Required:
+call dein#begin("~/.config/nvim/bundle/")
+call dein#add('Shougo/dein.vim')
+
+" Add or remove your Bundles here:
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add('tpope/vim-fugitive')
+call dein#add('ctrlpvim/ctrlp.vim')
+call dein#add('flazz/vim-colorschemes')
+call dein#add('scrooloose/nerdtree')
+call dein#add('elixir-lang/vim-elixir')
+call dein#add('slashmili/alchemist.vim')
+call dein#add('Shougo/deoplete.nvim')
+call dein#add('vim-airline/vim-airline')
+call dein#add('mklabs/split-term.vim')
+call dein#add('Lokaltog/powerline-fonts')
+call dein#add('SirVer/ultisnips')
+call dein#add('honza/vim-snippets')
+call dein#add('powerman/vim-plugin-AnsiEsc')
+call dein#add('cespare/vim-toml')
+call dein#add('chrisbra/Colorizer')
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently install them.
+if dein#check_install()
+    call dein#install()
+    let pluginsExist=1
 endif
 
 " Required:
-call neobundle#begin(expand('/home/corys/.config/nvim/bundle'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" Add or remove your Bundles here:
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'elixir-lang/vim-elixir'
-NeoBundle 'slashmili/alchemist.vim'
-NeoBundle 'Shougo/deoplete.nvim'
-NeoBundle 'vim-airline/vim-airline'
-NeoBundle 'mklabs/split-term.vim'
-NeoBundle 'Lokaltog/powerline-fonts'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'powerman/vim-plugin-AnsiEsc'
-NeoBundle 'cespare/vim-toml'
-NeoBundle 'chrisbra/Colorizer'
-
-
-" Required:
-call neobundle#end()
+call dein#end()
 
 " Required:
 filetype plugin indent on
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-"End NeoBundle Scripts-------------------------
+"End dein Scripts-------------------------
 "
 let g:alchemist_iex_term_size = 30
 
