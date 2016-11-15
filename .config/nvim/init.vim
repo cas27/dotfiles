@@ -60,9 +60,6 @@ let g:airline_right_alt_sep = ''
 
 " Deoplete Conf
 let g:deoplete#enable_at_startup = 1
-" Scroll suggestions with j/k
-inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
-inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
 
 " Gutentags Conf
 let g:gutentags_cache_dir = '~/.tags_cache'
@@ -77,6 +74,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
 
 " Neovim Conf
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 12
 
 " NerdTREE Conf
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -96,7 +94,6 @@ set cursorline
 colorscheme molokai
 let mapleader = " "
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
 
 "Restore cursor to file position in previous editing session
 ""http://vim.wikia.com/wiki/Restore_cursor_to_file_position_in_previous_editing_session
