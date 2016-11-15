@@ -41,7 +41,7 @@
 [tasks.bootstrap__arch]
   deps = ["yaourt"]
   cmds = [
-    ["@install", "rofi", "python3", "python-pip", "xdg-utils", "ruby", "ctags", "xorg-xrdb"],
+    ["@install", "rofi", "python3", "python-pip", "xdg-utils", "xorg-xprop", "ruby", "ctags", "xorg-xrdb"],
     ["yaourt", "i3-gaps nerd-fonts-complete urxvt-resize-font-git"],
     ["sudo", "pip", "install", "--upgrade", "pip"],
     ["sudo", "pip", "install", "neovim"],
