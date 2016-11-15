@@ -1,4 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
-name = Cory Schmitt
-email = cory@schmitty.me
+  name = Cory Schmitt
+  email = cory@schmitty.me
+
+[core]
+  excludesfile = ~/.gitignore_global

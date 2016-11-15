@@ -20,7 +20,7 @@
     [".config/nvim"],
     [".zshrc"],
     [".gitconfig"],
-    [".gitignore"]
+    [".gitignore_global"]
   ]
 
 [tasks.neovim]
