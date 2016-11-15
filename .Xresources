@@ -12,10 +12,13 @@ rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
 ! ------------------------------------------------------------------------------
 URxvt.keysym.Shift-Control-V:perl:clipboard:paste
 URxvt.iso14755:False
-URxvt.perl-ext-common:default,clipboard,matcher
+URxvt.perl-ext-common:default,clipboard,matcher,resize-font
 
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
+
+URxvt.resize-font.smaller: C-Down
+URxvt.resize-font.bigger: C-Up
 
 urxvt.scrollBar: false
 urxvt.jumpScroll: true
