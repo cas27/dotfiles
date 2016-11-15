@@ -91,6 +91,7 @@ set scrolloff=5
 set background=dark
 set hlsearch "highlight search 
 set incsearch
+set ignorecase smartcase "ignore case when searching
 set wrapscan "search from top when hit bottom
 set cursorline
 colorscheme molokai
