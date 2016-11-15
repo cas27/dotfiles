@@ -19,6 +19,7 @@
   links = [
     [".config/nvim"],
     [".zshrc"],
+    [".ctags"],
     [".gitconfig"],
     [".gitignore_global"]
   ]
