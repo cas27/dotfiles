@@ -79,6 +79,9 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
 " Neovim Conf
 set termguicolors
 
+" NerdTREE Conf
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 syntax on
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set number
