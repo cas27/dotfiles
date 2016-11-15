@@ -29,6 +29,8 @@ call dein#add('honza/vim-snippets')
 call dein#add('powerman/vim-plugin-AnsiEsc')
 call dein#add('chrisbra/Colorizer')
 call dein#add('ryanoasis/vim-devicons')
+call dein#add('neomake/neomake')
+call dein#add('ludovicchabant/vim-gutentags')
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently install them.
@@ -45,7 +47,10 @@ filetype plugin indent on
 
 "End dein Scripts-------------------------
 "
+
+" Alchemist Config
 let g:alchemist_iex_term_size = 30
+let g:alchemist_tag_disable = 1
 
 "Airline Config
 let g:airline_powerline_fonts = 1
@@ -53,17 +58,23 @@ let g:Powerline_symbols = 'fancy'
 let g:airline_left_alt_sep = ''
 let g:airline_right_alt_sep = ''
 
-" UltiNipsConf
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<C-j>"
-let g:UltiSnipsJumpBackwardTrigger="<C-k>"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
-
 " Deoplete Conf
 let g:deoplete#enable_at_startup = 1
 " Scroll suggestions with j/k
 inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
 inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
+
+" Gutentags Conf
+let g:gutentags_cache_dir = '~/.tags_cache'
+
+" Neomake Conf
+autocmd! BufWritePost * Neomake
+
+" UltiNipsConf
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
 
 " Neovim Conf
 set termguicolors
