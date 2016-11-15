@@ -11,6 +11,7 @@
   deps = ["common", "asdf"]
   links = [
     [".config/i3", ".config/i3-desktop"],
+    [".Xresources"],
     [".asdfrc"]
   ]
   
