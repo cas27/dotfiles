@@ -42,6 +42,7 @@
   deps = ["yaourt"]
   cmds = [
     ["@install", "python3", "python-pip", "ruby", "ctags", "xorg-xrdb"],
+    ["yaourt", "i3-gaps"],
     ["sudo", "pip", "install", "--upgrade", "pip"],
     ["sudo", "pip", "install", "neovim"],
     ["gem", "install", "neovim"],
