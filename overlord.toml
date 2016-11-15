@@ -34,9 +34,16 @@
   cmds = [["@clone", "git://github.com/asdf-vm/asdf.git", "./.asdf"]]
 
 [tasks.zsh]
-  rejects = [["which", "zsh"]]
   cmds = [
-    ["@install", "zsh"], 
-    ["chsh", "-s", "/usr/bin/zsh"],
     ["@clone", "git://github.com/robbyrussell/oh-my-zsh.git", "./.oh-my-zsh"]
+  ]
+
+[tasks.bootstrap__arch]
+  cmds = [
+    ["@install", "python3", "python-pip", "ruby", "ctags", "xorg-xrdb"],
+    ["sudo", "pip", "install", "--upgrade", "pip"],
+    ["sudo", "pip", "install", "neovim"],
+    ["gem", "install", "neovim"],
+    ["@clone", "https://github.com/Lokaltog/powerline-fonts", ".fonts"],
+    ["fc-cache", "-vf", ".fonts"]
   ]

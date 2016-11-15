@@ -115,6 +115,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # Application Startup
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/nebula.jpeg
+exec --no-startup-id /usr/bin/vmware-user-suid-wrapper #for virutal machines
 
 # Border config
 for_window [class="Gnome-terminal"] border pixel 0

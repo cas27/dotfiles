@@ -6,3 +6,59 @@ rofi.color-window: #393939, #393939, #268bd2
 rofi.color-normal: #393939, #ffffff, #393939, #268bd2, #ffffff
 rofi.color-active: #393939, #268bd2, #393939, #268bd2, #205171
 rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
+
+! ------------------------------------------------------------------------------
+! rxvt-unicode setup
+! ------------------------------------------------------------------------------
+URxvt.keysym.Shift-Control-V:perl:clipboard:paste
+URxvt.iso14755:False
+URxvt.perl-ext-common:default,clipboard
+
+urxvt.scrollBar: false
+urxvt.jumpScroll: true
+URxvt*internalBorder: 3
+urxvt.borderless: true
+urxvt.cursorBlink: true
+
+
+! [ terminal colors ]
+! !   black / dark gray
+ URxvt*color0: #1E1E1E
+ URxvt*color8: #5F5A60
+! !   red
+ URxvt*color1: #CF6A4C
+ URxvt*color9: #CF6A4C
+! !   green
+ URxvt*color2: #8F9D6A
+ URxvt*color10: #8F9D6A
+! !   yellow
+ URxvt*color3: #F9EE98
+ URxvt*color11:#F9EE98
+! !   blue
+ URxvt*color4: #7587A6
+ URxvt*color12: #7587A6
+! !   magenta
+ URxvt*color5: #9B859D
+ URxvt*color13: #9B859D
+! !   cyan
+ URxvt*color6: #AFC4DB
+ URxvt*color14: #AFC4DB
+! !   light gray / white
+ URxvt*color7: #A7A7A7
+ URxvt*color15: #FFFFFF
+!
+! ! [ urxvt ]
+URxvt*.depth: 32
+URxvt*background: [95]#1E1E1E
+URxvt*foreground: #A7A7A7
+URxvt*cursorColor: #A7A7A7
+URxvt.scrollstyle: plain
+!URxvt.font: xft:Source Code Pro for Powerline-10:hinting=True;antialias:True,xft:WenQuanYi Bitmap Song-10:medium;antialias=False,xft:WenQuanYi Zen Hei-10:medium;antialias=True,xft:HanaMinA-10:medium;antialias:True,xft:HanaMinB-10:medium;antialias:True,xft:HanaMinPlus-10:medium;antialias:True
+!URxvt.boldFont: xft:Source Code Pro for Powerline-10:bold;hinting=True;antialias:True,xft:WenQuanYi Bitmap Song-10:bold;antialias=False,xft:WenQuanYi Zen Hei-10:bold;antialias=True,xft:HanaMinA-10:bold;antialias:True,xft:HanaMinB-10:bold;antialias:True,xft:HanaMinPlus-10:bold;antialias:True
+! !URxvt*.geometry: 80x25
+!
+!! Hack
+URxvt.font:             xft:Hack:size=10:hinting=True;antialias:True,xft:PowerlineSymbols,xft:Font Awesome:size=10,xft:WenQuanYi Bitmap Song-12:medium;antialias=False,xft:WenQuanYi Zen Hei-12:medium;antialias=True,xft:HanaMinA-12:medium;antialias:True,xft:HanaMinB-12:medium;antialias:True,xft:HanaMinPlus-12:medium;antialias:True
+URxvt.boldFont:             xft:Hack:size=10:bold;hinting=True;antialias:True,xft:Font Awesome:size=10,xft:WenQuanYi Bitmap Song-12:bold;antialias=False,xft:WenQuanYi Zen Hei-12:bold;antialias=True,xft:HanaMinA-12:bold;antialias:True,xft:HanaMinB-12:bold;antialias:True,xft:HanaMinPlus-12:bold;antialias:True
+!!
+!
