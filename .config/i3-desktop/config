@@ -105,6 +105,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/yosemite.jpg
 exec --no-startup-id /usr/bin/vmware-user-suid-wrapper #for virutal machines
+exec --no-startup-id /usr/bin/lxqt-policykit-agent #auth requests
 exec --no-startup-id compton -f 
 exec --no-startup-id kalu
 
