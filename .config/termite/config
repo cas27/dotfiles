@@ -1,0 +1,21 @@
+[options]
+font = Hack 13
+
+[colors]
+background = rgba(30, 30, 30, 0.95)
+color0 = #1E1E1E
+color8 = #5F5A60
+color1 = #CF6A4C
+color9 = #CF6A4C
+color2 = #8F9D6A
+color10 = #8F9D6A
+color3 = #F9EE98
+color11 = F9EE98
+color4 = #7587A6
+color12 = #7587A6
+color5 = #9B859D
+color13 = #9B859D
+color6 = #AFC4DB
+color14 = #AFC4DB
+color7 = #A7A7A7
+color15 = #FFFFFF

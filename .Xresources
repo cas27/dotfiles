@@ -21,6 +21,8 @@ rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
 URxvt.keysym.Shift-Control-V:perl:clipboard:paste
 URxvt.iso14755:False
 URxvt.perl-ext-common:default,clipboard,matcher,resize-font
+URxvt*termName: rxvt-unicode-256color
+URxvt*imLocale: en_US.UTF-8
 
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
@@ -72,7 +74,7 @@ URxvt.scrollstyle: plain
 ! !URxvt*.geometry: 80x25
 !
 !! Hack
-URxvt.font:             xft:Hack:size=12:hinting=True;antialias:True,xft:PowerlineSymbols,xft:Font Awesome:size=10,xft:WenQuanYi Bitmap Song-12:medium;antialias=False,xft:WenQuanYi Zen Hei-12:medium;antialias=True,xft:HanaMinA-12:medium;antialias:True,xft:HanaMinB-12:medium;antialias:True,xft:HanaMinPlus-12:medium;antialias:True
-URxvt.boldFont:             xft:Hack:size=12:bold;hinting=True;antialias:True,xft:Font Awesome:size=10,xft:WenQuanYi Bitmap Song-12:bold;antialias=False,xft:WenQuanYi Zen Hei-12:bold;antialias=True,xft:HanaMinA-12:bold;antialias:True,xft:HanaMinB-12:bold;antialias:True,xft:HanaMinPlus-12:bold;antialias:True
+URxvt.font: xft:Hack:size=12:hinting=True;antialias:True,xft:PowerlineSymbols,xft:Font Awesome:size=10,xft:WenQuanYi Bitmap Song-12:medium;antialias=False,xft:WenQuanYi Zen Hei-12:medium;antialias=True,xft:HanaMinA-12:medium;antialias:True,xft:HanaMinB-12:medium;antialias:True,xft:HanaMinPlus-12:medium;antialias:True,xft:InconsolataForPowerline Nerd Font
+URxvt.boldFont: xft:Hack:size=12:bold;hinting=True;antialias:True,xft:Font Awesome:size=10,xft:WenQuanYi Bitmap Song-12:bold;antialias=False,xft:WenQuanYi Zen Hei-12:bold;antialias=True,xft:HanaMinA-12:bold;antialias:True,xft:HanaMinB-12:bold;antialias:True,xft:HanaMinPlus-12:bold;antialias:True
 !!
 !

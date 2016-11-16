@@ -19,6 +19,7 @@
   deps = ["neovim", "zsh"]
   links = [
     [".config/nvim"],
+    [".config/termite"],
     [".zshrc"],
     [".ctags"],
     [".gitconfig"],
@@ -34,6 +35,7 @@
   cmds = [["@clone", "git://github.com/asdf-vm/asdf.git", "./.asdf"]]
 
 [tasks.zsh]
+  rejects = [["which", "zsh"]]
   cmds = [
     ["@clone", "git://github.com/robbyrussell/oh-my-zsh.git", "./.oh-my-zsh"]
   ]
@@ -42,7 +44,7 @@
   deps = ["yaourt"]
   cmds = [
     ["@install", "rofi", "python3", "python-pip", "xdg-utils", "xorg-xprop", "ruby", "ctags", "xorg-xrdb"],
-    ["@install", "unzip", "arc-gtk-theme", "lxappearance", "compton", "lxqt-policykit"],
+    ["@install", "unzip", "arc-gtk-theme", "lxappearance", "compton", "lxqt-policykit", "termite"],
     ["yaourt", "i3-gaps nerd-fonts-complete urxvt-resize-font-git kalu"],
     ["sudo", "pip", "install", "--upgrade", "pip"],
     ["sudo", "pip", "install", "neovim"],

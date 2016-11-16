@@ -11,7 +11,7 @@ font pango:monospace 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -108,10 +108,12 @@ exec --no-startup-id /usr/bin/vmware-user-suid-wrapper #for virutal machines
 exec --no-startup-id /usr/bin/lxqt-policykit-agent #auth requests
 exec --no-startup-id compton -f 
 exec --no-startup-id kalu
+exec --no-startup-id dropbox
 
 # Border config
 for_window [class="Gnome-terminal"] border pixel 0
 for_window [class="URxvt"] border pixel 0
+for_window [class="Termite"] border pixel 0
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
