@@ -116,7 +116,7 @@ noremap <leader>t :Term mix test<CR>
 inoremap fd <Esc>
 
 " Switch between the last two files
-nnoremap <leader><leader> <c-^>
+nnoremap <leader><leader> <c-^> :syntax on<CR>
 
 " To save, ctrl-s.
 nmap <c-s> :w<CR>
