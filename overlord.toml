@@ -42,7 +42,7 @@
   deps = ["yaourt"]
   cmds = [
     ["@install", "rofi", "python3", "python-pip", "xdg-utils", "xorg-xprop", "ruby", "ctags", "xorg-xrdb"],
-    ["@install", "unzip", "arc-gtk-theme", "lxappearance", "compton"],
+    ["@install", "unzip", "arc-gtk-theme", "lxappearance", "compton", "lxqt-policykit"],
     ["yaourt", "i3-gaps nerd-fonts-complete urxvt-resize-font-git kalu"],
     ["sudo", "pip", "install", "--upgrade", "pip"],
     ["sudo", "pip", "install", "neovim"],
