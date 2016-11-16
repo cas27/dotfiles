@@ -8,7 +8,7 @@
   prefix = ["git", "clone"]
 
 [tasks.desktop]
-  deps = ["common", "asdf"]
+  deps = ["common", "asdf", "nodejs"]
   links = [
     [".config/i3", ".config/i3-desktop"],
     [".Xresources"],
@@ -25,6 +25,10 @@
     [".gitconfig"],
     [".gitignore_global"]
   ]
+
+[tasks.nodejs]
+  rejects = [["which", "node"]]
+  cmds = [["@install", "nodejs", "npm"]]
 
 [tasks.neovim]
   rejects = [["which", "nvim"]]
