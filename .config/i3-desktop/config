@@ -106,6 +106,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/yosemite.jpg
 exec --no-startup-id /usr/bin/vmware-user-suid-wrapper #for virutal machines
 exec --no-startup-id compton -f 
+exec --no-startup-id kalu
 
 # Border config
 for_window [class="Gnome-terminal"] border pixel 0

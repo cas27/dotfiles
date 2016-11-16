@@ -43,7 +43,7 @@
   cmds = [
     ["@install", "rofi", "python3", "python-pip", "xdg-utils", "xorg-xprop", "ruby", "ctags", "xorg-xrdb"],
     ["@install", "unzip", "arc-gtk-theme", "lxappearance", "compton"],
-    ["yaourt", "i3-gaps nerd-fonts-complete urxvt-resize-font-git"],
+    ["yaourt", "i3-gaps nerd-fonts-complete urxvt-resize-font-git kalu"],
     ["sudo", "pip", "install", "--upgrade", "pip"],
     ["sudo", "pip", "install", "neovim"],
     ["gem", "install", "neovim"],
