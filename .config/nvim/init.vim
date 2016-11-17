@@ -116,6 +116,7 @@ set splitright
 noremap <leader>f :NERDTreeToggle<CR>
 noremap <leader>t :Term mix test<CR>
 inoremap fd <Esc>
+set pastetoggle=<F2>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^> :syntax on<CR>
