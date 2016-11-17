@@ -17,8 +17,7 @@ bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
 
 # start app runner
-#bindsym $mod+d exec rofi -show run
-bindsym $mod+d exec rofi -show run -lines 6 -eh 2 -width 100 -padding 625 -opacity "85" -bw 0
+bindsym $mod+d exec rofi -show run -lines 6 -eh 2 -fullscreen -padding 300 -opacity "85" -bw 0
 
 # change focus
 bindsym $mod+h focus left
@@ -165,7 +164,7 @@ client.background       	#111111
 #::::::::::::::::::: Settings for i3-gaps :::::::::::::::::::::#
 ################################################################
 # Set inner/outer gaps
-set $default_gaps_inner 10
+set $default_gaps_inner 15
 set $default_gaps_outer -4
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
