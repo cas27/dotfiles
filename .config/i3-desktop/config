@@ -113,6 +113,7 @@ exec --no-startup-id dropbox
 for_window [class="Gnome-terminal"] border pixel 0
 for_window [class="URxvt"] border pixel 0
 for_window [class="Termite"] border pixel 0
+for_window [class="Thunar"] border pixel 0
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
