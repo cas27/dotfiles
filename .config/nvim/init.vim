@@ -83,6 +83,7 @@ syntax on
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set number
 set autoindent
+set smartindent
 set autoread
 set scrolloff=5
 set background=dark
@@ -108,8 +109,9 @@ let g:ctrlp_custom_ignore = {
     \ 'file': '\v\c\.(swf|bak|png|gif|mov|ico|jpg|pdf|jrxml)$',
     \}
 
-" Set terminals to split below
+" Set terminals to split below and right
 set splitbelow
+set splitright
 
 noremap <leader>f :NERDTreeToggle<CR>
 noremap <leader>t :Term mix test<CR>
