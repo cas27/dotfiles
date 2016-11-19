@@ -115,6 +115,7 @@ set splitright
 
 noremap <leader>f :NERDTreeToggle<CR>
 noremap <leader>t :Term mix test<CR>
+noremap <leader>i :IEx<CR>
 inoremap fd <Esc>
 set pastetoggle=<F2>
 

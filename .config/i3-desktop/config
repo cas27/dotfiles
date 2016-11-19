@@ -4,8 +4,12 @@
 
 set $mod Mod4
 
+# Workspaces
+set $wrk1 "1    "
+set $wrk2 "2    "
+
 # Font for window titles. Will also be used by the bar
-font pango:SFNS\Display\Regular 13
+font pango:SFNS Display Regular 14
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -73,8 +77,8 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
+bindsym $mod+1 workspace $wrk1
+bindsym $mod+2 workspace $wrk2
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
@@ -85,8 +89,8 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+1 move container to workspace $wrk1
+bindsym $mod+Shift+2 move container to workspace $wrk2
 bindsym $mod+Shift+3 move container to workspace 3
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
@@ -108,7 +112,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/yosemite.jpg
 exec --no-startup-id /usr/bin/vmware-user-suid-wrapper #for virutal machines
 exec --no-startup-id /usr/bin/lxqt-policykit-agent #auth requests
-exec --no-startup-id compton -f 
+exec --no-startup-id compton -f -b
 exec --no-startup-id kalu
 exec --no-startup-id dropbox
 
@@ -146,7 +150,7 @@ bindsym $mod+r mode "resize"
 bar {
   status_command i3status -c $HOME/.config/i3/i3-status.conf
 	colors {
-		background #353941
+		background #1b1d1f
 		statusline #9e958e
 		separator  #081419
 		focused_workspace  #08202a #08202a #e7dfd9
