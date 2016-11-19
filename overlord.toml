@@ -50,7 +50,7 @@
     ["@install", "rofi", "python3", "python-pip", "xdg-utils", "xorg-xprop", "ruby", "ctags", "xorg-xrdb"],
     ["@install", "unzip", "arc-gtk-theme", "lxappearance", "compton", "lxqt-policykit", "termite", "thunar"],
     ["@install", "inotify-tools", "catfish", "mlocate"],
-    ["yaourt", "i3-gaps nerd-fonts-complete urxvt-resize-font-git kalu"],
+    ["yaourt", "i3-gaps", "nerd-fonts-complete", "urxvt-resize-font-git", "kalu", "otf-fontawesome"],
     ["sudo", "pip", "install", "--upgrade", "pip"],
     ["sudo", "pip", "install", "neovim"],
     ["gem", "install", "neovim"],
