@@ -31,6 +31,7 @@ call dein#add('chrisbra/Colorizer')
 call dein#add('ryanoasis/vim-devicons')
 call dein#add('neomake/neomake')
 call dein#add('ludovicchabant/vim-gutentags')
+call dein#add('roman/golden-ratio')
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently install them.
@@ -120,7 +121,7 @@ inoremap fd <Esc>
 set pastetoggle=<F2>
 
 " Switch between the last two files
-nnoremap <leader><leader> <c-^> :syntax on<CR>
+nnoremap <leader><leader> <c-^> :syntax reset<CR>:syntax on<CR>
 
 " To save, ctrl-s.
 nmap <c-s> :w<CR>
