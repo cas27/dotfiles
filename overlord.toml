@@ -51,6 +51,7 @@
     ["@install", "unzip", "arc-gtk-theme", "lxappearance", "compton", "lxqt-policykit", "termite", "thunar"],
     ["@install", "inotify-tools", "catfish", "mlocate"],
     ["yaourt", "i3-gaps", "nerd-fonts-complete", "urxvt-resize-font-git", "kalu", "otf-fontawesome"],
+    ["yaourt", "i3blocks-gaps-git"],
     ["sudo", "pip", "install", "--upgrade", "pip"],
     ["sudo", "pip", "install", "neovim"],
     ["gem", "install", "neovim"],
