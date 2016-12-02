@@ -153,6 +153,7 @@ noremap <leader>t :Term mix test<CR>
 noremap <leader>i :IEx<CR>
 inoremap fd <Esc>
 set pastetoggle=<F2>
+noremap <leader>q :bd<CR>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^> :syntax reset<CR>:syntax on<CR>
