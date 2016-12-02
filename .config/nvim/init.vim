@@ -112,6 +112,7 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 20
+let NERDTreeMinimalUI=1
 
 syntax on
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
