@@ -22,6 +22,7 @@ call dein#add('scrooloose/nerdtree')
 call dein#add('slashmili/alchemist.vim')
 call dein#add('Shougo/deoplete.nvim')
 call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
 call dein#add('mklabs/split-term.vim')
 call dein#add('Lokaltog/powerline-fonts')
 call dein#add('SirVer/ultisnips')
@@ -59,8 +60,9 @@ let g:alchemist_tag_disable = 1
 let g:airline_powerline_fonts = 1
 set hidden
 let g:Powerline_symbols = 'fancy'
-let g:airline_left_alt_sep = ''
-let g:airline_right_alt_sep = ''
+let g:airline_theme='kolor'
+"let g:airline_left_alt_sep = ''
+"let g:airline_right_alt_sep = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_tab_nr = 1
@@ -119,12 +121,13 @@ set smartindent
 set autoread
 set scrolloff=5
 set background=dark
-set hlsearch "highlight search 
+set hlsearch "highlight search
 set incsearch
 set ignorecase smartcase "ignore case when searching
 set wrapscan "search from top when hit bottom
 set cursorline
-colorscheme molokai
+"colorscheme molokai
+colorscheme OceanicNext
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
 "Restore cursor to file position in previous editing session
