@@ -60,14 +60,15 @@
   ]
 
 [tasks.yaourt]
+  rejects = [["which", "yaourt"]]
   cmds = [
     ["@install", "wget"],
     ["wget", "-P", "bt-tmp/", "https://aur.archlinux.org/cgit/aur.git/snapshot/package-query.tar.gz"],
-    ["tar", "xfz", "bt-tmp/package-query.tar.gz", "-C", "tmp/"],
+    ["tar", "xfz", "bt-tmp/package-query.tar.gz", "-C", "bt-tmp/"],
     ["sh", "-c", "cd bt-tmp/package-query && makepkg"],
     ["sudo", "sh", "-c", "pacman -U bt-tmp/package-query/package-query*.pkg.tar.xz"],
     ["wget", "-P", "bt-tmp/", "https://aur.archlinux.org/cgit/aur.git/snapshot/yaourt.tar.gz"],
-    ["tar", "xfz", "bt-tmp/yaourt.tar.gz", "-C", "tmp/"],
+    ["tar", "xfz", "bt-tmp/yaourt.tar.gz", "-C", "bt-tmp/"],
     ["sh", "-c", "cd bt-tmp/yaourt && makepkg"],
     ["sudo", "sh", "-c", "pacman -U bt-tmp/yaourt/yaourt*.pkg.tar.xz"],
     ["rm", "-rf", "bt-tmp/"]
