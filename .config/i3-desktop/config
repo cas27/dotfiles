@@ -10,6 +10,7 @@ set $wrk2 "2    "
 
 # Font for window titles. Will also be used by the bar
 font pango:SFNS Display Regular 14
+font pango:Source Code Pro for Powerline 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -151,21 +152,21 @@ bar {
   i3bar_command i3bar -t
   status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
 
-	colors {
-		background #1b1d1f
-		statusline #9e958e
-		separator  #081419
-		focused_workspace  #08202a #08202a #e7dfd9
-		inactive_workspace #253941 #253941 #9e958e
-		urgent_workspace   #1b1d1f #c6a78a #000000
-	}
+  colors {
+    background #1b1d1f
+    statusline #9e958e
+    separator  #081419
+    focused_workspace  #08202a #08202a #e7dfd9
+    inactive_workspace #253941 #253941 #9e958e
+    urgent_workspace   #1b1d1f #c6a78a #000000
+  }
 }
 
 ################################################################
-#                         border  backgr  text     indicator child_border 
+#                         border  backgr  text     indicator child_border
 client.focused		 	      #1d3037 #000000 #ffffff  #ffffff   #1d3037
 client.focused_inactive 	#1d2121 #1d2121 #a1a1a1  #484e50   #1d2121
-client.unfocused 		      #272727 #272727 #fdfdfd  #bfbfbf   #272727	
+client.unfocused 		      #272727 #272727 #fdfdfd  #bfbfbf   #272727
 client.urgent   		      #4a4b4c #4a4b4c #fdfdfd  #fbfbfb   #4a4c4b
 client.placeholder     		#000000 #0c0c0c #ffffff  #000000   #0c0c0c
 
