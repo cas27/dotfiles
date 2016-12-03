@@ -104,6 +104,7 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
 " Neovim Conf
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 13
 set termguicolors
+set clipboard+=unnamedplus
 
 " NerdTREE Conf
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
