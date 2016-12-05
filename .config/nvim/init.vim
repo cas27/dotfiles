@@ -61,8 +61,6 @@ let g:airline_powerline_fonts = 1
 set hidden
 let g:Powerline_symbols = 'fancy'
 let g:airline_theme='kolor'
-"let g:airline_left_alt_sep = ''
-"let g:airline_right_alt_sep = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_tab_nr = 1
