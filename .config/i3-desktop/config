@@ -123,6 +123,7 @@ for_window [class="URxvt"] border pixel 0
 for_window [class="Termite"] border pixel 0
 for_window [class="Thunar"] border pixel 0
 for_window [class="Firefox"] border pixel 0
+for_window [class="Chromium"] border pixel 0
 for_window [class="Catfish"] floating enable
 
 
