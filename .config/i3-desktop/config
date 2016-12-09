@@ -7,7 +7,7 @@ set $mod Mod4
 # Workspaces
 set $wrk1 "1    "
 set $wrk2 "2    "
-set $wrk3 "3   "
+set $wrk3 "3    "
 
 # Font for window titles. Will also be used by the bar
 font pango:SFNS Display Regular 14
