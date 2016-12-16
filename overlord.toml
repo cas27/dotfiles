@@ -8,11 +8,10 @@
   prefix = ["git", "clone"]
 
 [tasks.desktop]
-  deps = ["common", "asdf", "nodejs"]
+  deps = ["common", "nodejs"]
   links = [
     [".config/i3", ".config/i3-desktop"],
-    [".Xresources"],
-    [".asdfrc"]
+    [".Xresources"]
   ]
   
 [tasks.common]
@@ -33,10 +32,6 @@
 [tasks.neovim]
   rejects = [["which", "nvim"]]
   cmds = [["@install", "neovim"]]
-
-[tasks.asdf]
-  rejects = [["which", "asdf"]]
-  cmds = [["@clone", "git://github.com/asdf-vm/asdf.git", "./.asdf"]]
 
 [tasks.zsh]
   rejects = [["which", "zsh"]]
