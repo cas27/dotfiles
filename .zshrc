@@ -51,9 +51,10 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z mix asdf systemd)
+plugins=(git z mix systemd)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.profile
 
 # User configuration
 
@@ -85,5 +86,3 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi=nvim
 alias vim=nvim
-
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
