@@ -33,6 +33,7 @@ call dein#add('ryanoasis/vim-devicons')
 call dein#add('neomake/neomake')
 call dein#add('ludovicchabant/vim-gutentags')
 call dein#add('zhaocai/GoldenView.Vim')
+call dein#add('vimwiki/vimwiki.git')
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently install them.

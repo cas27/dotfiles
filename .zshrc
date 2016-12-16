@@ -85,5 +85,6 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi=nvim
 alias vim=nvim
+alias start="nvim ~/vimwiki/Morning\ Checklist.wiki"
 
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
