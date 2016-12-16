@@ -13,7 +13,7 @@
     [".config/i3", ".config/i3-desktop"],
     [".Xresources"]
   ]
-  
+
 [tasks.common]
   deps = ["neovim", "zsh"]
   links = [
@@ -42,13 +42,14 @@
 [tasks.bootstrap__arch]
   deps = ["yaourt"]
   cmds = [
-    ["@install", "rofi", "python3", "python-pip", "xdg-utils", "xorg-xprop", "ruby", "ctags", "xorg-xrdb"],
+    ["@install", "rofi", "python3", "xdg-utils", "xorg-xprop", "ruby", "ctags", "xorg-xrdb"],
     ["@install", "unzip", "arc-gtk-theme", "lxappearance", "compton", "lxqt-policykit", "termite", "thunar"],
     ["@install", "inotify-tools", "catfish", "mlocate", "sysstat", "xclip"],
     ["yaourt", "i3-gaps", "nerd-fonts-complete", "urxvt-resize-font-git", "kalu", "otf-fontawesome"],
-    ["yaourt", "i3blocks-gaps-git"],
-    ["sudo", "pip", "install", "--upgrade", "pip"],
-    ["sudo", "pip", "install", "neovim"],
+    ["yaourt", "i3blocks-gaps-git", "python2-pip"],
+    ["sudo", "pip3", "install", "--upgrade", "pip"],
+    ["sudo", "pip2", "install", "neovim"],
+    ["sudo", "pip3", "install", "neovim"],
     ["gem", "install", "neovim"],
     ["@clone", "https://github.com/Lokaltog/powerline-fonts", ".fonts"],
     ["fc-cache", "-vf", ".fonts"]
