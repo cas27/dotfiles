@@ -61,6 +61,8 @@ let g:alchemist_tag_disable = 1
 let g:airline_powerline_fonts = 1
 set hidden
 let g:Powerline_symbols = 'fancy'
+let g:airline_left_alt_sep = ''
+let g:airline_right_alt_sep = ''
 let g:airline_theme='kolor'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
@@ -154,6 +156,8 @@ noremap <leader>i :IEx<CR>
 inoremap fd <Esc>
 set pastetoggle=<F2>
 noremap <leader>q :bd<CR>
+map <Leader>p :call dein#update()<CR>
+
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^> :syntax reset<CR>:syntax on<CR>
