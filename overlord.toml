@@ -11,6 +11,7 @@
   deps = ["common", "nodejs"]
   links = [
     [".config/i3", ".config/i3-desktop"],
+    [".profile"],
     [".Xresources"]
   ]
 
