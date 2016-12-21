@@ -87,3 +87,5 @@ fi
 alias vi=nvim
 alias vim=nvim
 alias start="nvim ~/vimwiki/Morning\ Checklist.wiki"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
