@@ -2,7 +2,7 @@
 font = Hack 14
 
 [colors]
-background = rgba(30, 30, 30, 1)
+background = #1E1E1E
 color0 = #1E1E1E
 color8 = #5F5A60
 color1 = #CF6A4C
