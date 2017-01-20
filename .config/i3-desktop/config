@@ -160,8 +160,8 @@ bar {
     background #1b1d1f
     statusline #9e958e
     separator  #081419
-    focused_workspace  #08202a #08202a #e7dfd9
-    inactive_workspace #253941 #253941 #9e958e
+    focused_workspace  #253941 #253941 #e7dfd9
+    inactive_workspace #08202a #08202a #9e958e
     urgent_workspace   #1b1d1f #c6a78a #000000
   }
 }
