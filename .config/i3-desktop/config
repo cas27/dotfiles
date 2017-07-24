@@ -17,7 +17,7 @@ font pango:Source Code Pro for Powerline 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec konsole
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -118,10 +118,12 @@ exec --no-startup-id numlockx on
 exec --no-startup-id compton -f -b
 exec --no-startup-id kalu
 exec --no-startup-id dropbox
+exec --no-startup-id /usr/bin/mate-power-manager
 
 # Window Config
 for_window [class="Gnome-terminal"] border pixel 0
 for_window [class="URxvt"] border pixel 0
+for_window [class="konsole"] border pixel 0
 for_window [class="Termite"] border pixel 0
 for_window [class="Thunar"] border pixel 0
 for_window [class="Firefox"] border pixel 0
