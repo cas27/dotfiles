@@ -17,7 +17,7 @@ font pango:Source Code Pro for Powerline 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -120,14 +120,9 @@ exec --no-startup-id dropbox
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/rocket.png
 
 # Window Config
-for_window [class="Gnome-terminal"] border pixel 0
-for_window [class="URxvt"] border pixel 0
-for_window [class="konsole"] border pixel 0
-for_window [class="Termite"] border pixel 0
 for_window [class="Thunar"] border pixel 0
 for_window [class="Firefox"] border pixel 0
 for_window [class="Chromium"] border pixel 0
-for_window [class="konsole"] border pixel 0
 for_window [class="kitty"] border pixel 0
 for_window [class="Catfish"] floating enable
 
