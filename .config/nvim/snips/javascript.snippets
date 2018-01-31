@@ -1,0 +1,25 @@
+snippet rc "React Component Boilerplate" bw
+import React, { Component } from 'react';
+
+class ${1:COMPONENT_NAME} extends Component {
+  render() {
+    return(
+      ${0}
+    );
+  }
+}
+
+export default $1
+endsnippet
+
+snippet rfc "React Func Component Boilerplate" bw
+import React from 'react';
+
+const ${1:COMPONENT_NAME} = () => {
+    return(
+      ${0}
+    );
+}
+
+export default $1
+endsnippet

@@ -129,8 +129,8 @@ set incsearch
 set ignorecase smartcase "ignore case when searching
 set wrapscan "search from top when hit bottom
 set cursorline
-"colorscheme molokai
-colorscheme OceanicNext
+colorscheme molokai
+"colorscheme OceanicNext
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
 "Restore cursor to file position in previous editing session

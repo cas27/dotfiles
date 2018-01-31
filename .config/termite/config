@@ -1,8 +1,8 @@
 [options]
-font = Hack 14
+font = Hack 16
 
 [colors]
-background = #1E1E1E
+background = rgba(30, 30, 30, 0.96)
 color0 = #1E1E1E
 color8 = #5F5A60
 color1 = #CF6A4C

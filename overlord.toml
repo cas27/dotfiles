@@ -44,7 +44,7 @@
   deps = ["yaourt"]
   cmds = [
     ["@install", "rofi", "python3", "xdg-utils", "xorg-xprop", "ruby", "ctags", "xorg-xrdb"],
-    ["@install", "unzip", "arc-gtk-theme", "lxappearance", "compton", "lxqt-policykit", "termite", "thunar"],
+    ["@install", "unzip", "arc-gtk-theme", "lxappearance", "compton", "lxqt-policykit", "kitty", "thunar"],
     ["@install", "inotify-tools", "catfish", "mlocate", "sysstat", "xclip", "numlockx"],
     ["yaourt", "i3-gaps", "nerd-fonts-complete", "urxvt-resize-font-git", "kalu", "otf-fontawesome"],
     ["yaourt", "i3blocks-gaps-git", "python2-pip"],
