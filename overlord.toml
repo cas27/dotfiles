@@ -19,7 +19,7 @@
   deps = ["neovim", "zsh"]
   links = [
     [".config/nvim"],
-    [".config/termite"],
+    [".config/kitty"],
     [".zshrc"],
     [".ctags"],
     [".gitconfig"],
@@ -44,11 +44,7 @@
   deps = ["yaourt"]
   cmds = [
     ["@install", "rofi", "python3", "xdg-utils", "xorg-xprop", "ruby", "ctags", "xorg-xrdb"],
-<<<<<<< HEAD
     ["@install", "unzip", "arc-gtk-theme", "lxappearance", "compton", "lxqt-policykit", "kitty", "thunar"],
-=======
-    ["@install", "unzip", "arc-gtk-theme", "lxappearance", "compton", "lxqt-policykit", "thunar"],
->>>>>>> 5aadb3f2a8e5ab73401ca2a2b205ba06f873ba91
     ["@install", "inotify-tools", "catfish", "mlocate", "sysstat", "xclip", "numlockx"],
     ["yaourt", "i3-gaps", "kalu", "otf-fontawesome", "fira-code-git", "konsole"],
     ["yaourt", "i3blocks-gaps-git", "python2-pip"],
