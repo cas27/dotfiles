@@ -44,6 +44,7 @@ endif
 
 " Required:
 call dein#end()
+call dein#save_state()
 
 " Required:
 filetype plugin indent on

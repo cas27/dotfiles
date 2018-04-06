@@ -116,8 +116,9 @@ exec --no-startup-id /usr/bin/lxqt-policykit-agent #auth requests
 exec --no-startup-id numlockx on
 exec --no-startup-id compton -f -b
 exec --no-startup-id kalu
-exec --no-startup-id dropbox
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/moon.png
+#exec --no-startup-id dropbox
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/moon.jpg
+#exec --no-startup-id xwinwrap -ov -ni -fs -- mpv -vo x11 -wid WID --keepaspect=no --loop ~/Pictures/wallpapers/waterfall.gif
 
 # Window Config
 for_window [class="Thunar"] border pixel 0
