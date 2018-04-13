@@ -34,6 +34,8 @@ call dein#add('neomake/neomake')
 call dein#add('ludovicchabant/vim-gutentags')
 call dein#add('zhaocai/GoldenView.Vim')
 call dein#add('vimwiki/vimwiki.git')
+call dein#add('baverman/vial')
+call dein#add('baverman/vial-http')
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently install them.
@@ -152,7 +154,9 @@ set splitbelow
 set splitright
 
 noremap <leader>f :NERDTreeToggle<CR>
-noremap <leader>t :Term mix test<CR>
+noremap <leader>t :terminal mix test<CR>
+noremap <leader>r :terminal bin/rspec<CR>
+noremap <leader>x :bd!<CR> 
 noremap <leader>i :IEx<CR>
 inoremap fd <Esc>
 set pastetoggle=<F2>
