@@ -91,3 +91,5 @@ alias start="nvim ~/vimwiki/Morning\ Checklist.wiki"
 export ERL_AFLAGS="-kernel shell_history enabled"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+
+source ~/.keys
