@@ -36,6 +36,7 @@ call dein#add('zhaocai/GoldenView.Vim')
 call dein#add('vimwiki/vimwiki.git')
 call dein#add('baverman/vial')
 call dein#add('baverman/vial-http')
+call dein#add('KabbAmine/zeavim.vim')
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently install them.
