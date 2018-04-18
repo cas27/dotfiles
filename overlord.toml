@@ -46,7 +46,7 @@
     ["@install", "rofi", "python3", "xdg-utils", "xorg-xprop", "ruby", "ctags", "xorg-xrdb"],
     ["@install", "unzip", "arc-gtk-theme", "lxappearance", "compton", "lxqt-policykit", "kitty", "thunar"],
     ["@install", "inotify-tools", "catfish", "mlocate", "sysstat", "xclip", "numlockx"],
-    ["yaourt", "i3-gaps", "kalu", "otf-fontawesome", "fira-code-git", "konsole"],
+    ["yaourt", "i3-gaps", "otf-fontawesome", "fira-code-git"],
     ["yaourt", "i3blocks-gaps-git", "python2-pip"],
     ["sudo", "pip3", "install", "--upgrade", "pip"],
     ["sudo", "pip2", "install", "neovim"],
