@@ -133,6 +133,7 @@ set incsearch
 set ignorecase smartcase "ignore case when searching
 set wrapscan "search from top when hit bottom
 set cursorline
+set lazyredraw
 colorscheme molokai
 "colorscheme OceanicNext
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
