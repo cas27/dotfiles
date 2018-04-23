@@ -93,3 +93,18 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 export PATH="$(yarn global bin):$PATH"
 source ~/.keys
+source /usr/share/nvm/init-nvm.sh
+
+# save path on cd
+function cd {
+    builtin cd $@
+    pwd > ~/.last_dir
+}
+
+# restore last saved path
+if [ -f ~/.last_dir ]
+    then cd `cat ~/.last_dir`
+fi
+
+# reset back to home on exiting terminal
+trap "[ -f ~/.last_dir ] && rm ~/.last_dir" EXIT
