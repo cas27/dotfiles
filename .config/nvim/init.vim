@@ -37,6 +37,7 @@ call dein#add('vimwiki/vimwiki.git')
 call dein#add('baverman/vial')
 call dein#add('baverman/vial-http')
 call dein#add('KabbAmine/zeavim.vim')
+call dein#add('mileszs/ack.vim')
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently install them.
@@ -160,6 +161,7 @@ noremap <leader>t :terminal mix test<CR>
 noremap <leader>r :terminal bin/rspec<CR>
 noremap <leader>x :bd!<CR> 
 noremap <leader>i :IEx<CR>
+noremap <leader>a :Ack 
 inoremap fd <Esc>
 set pastetoggle=<F2>
 noremap <leader>q :bd<CR>
