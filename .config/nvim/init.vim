@@ -183,3 +183,6 @@ map <leader>tm :tabmove<cr>
 " Autoformat Elixir files on save
 autocmd BufWritePost *.exs silent :!mix format %
 autocmd BufWritePost *.ex silent :!mix format %
+
+" Autoformat Elm files on save
+autocmd BufWritePost *.elm silent :!elm-format %
