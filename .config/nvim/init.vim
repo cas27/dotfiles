@@ -34,8 +34,6 @@ call dein#add('neomake/neomake')
 call dein#add('ludovicchabant/vim-gutentags')
 call dein#add('zhaocai/GoldenView.Vim')
 call dein#add('vimwiki/vimwiki.git')
-call dein#add('baverman/vial')
-call dein#add('baverman/vial-http')
 call dein#add('KabbAmine/zeavim.vim')
 call dein#add('mileszs/ack.vim')
 
