@@ -185,7 +185,3 @@ autocmd BufWritePost *.exs silent :!mix format %
 autocmd BufWritePost *.ex silent :!mix format %
 autocmd BufWritePost *.exs silent :e
 autocmd BufWritePost *.ex silent :e
-
-" Autoformat Elm files on save
-autocmd BufWritePost *.elm silent :!elm-format --yes %
-autocmd BufWritePost *.elm silent :e
