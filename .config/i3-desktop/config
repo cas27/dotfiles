@@ -19,6 +19,10 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec kitty
 
+# launch dev browsers
+bindsym $mod+p exec qutebrowser localhost:4000
+bindsym $mod+b exec qutebrowser localhost:3000
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -124,6 +128,7 @@ for_window [class="Thunar"] border pixel 0
 for_window [class="Firefox"] border pixel 0
 for_window [class="Chromium"] border pixel 0
 for_window [class="kitty"] border pixel 0
+for_window [class="qutebrowser"] border pixel 0
 for_window [class="Catfish"] floating enable
 
 
