@@ -124,11 +124,7 @@ exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/moon.jpg
 #exec --no-startup-id xwinwrap -ov -ni -fs -- mpv -vo x11 -wid WID --keepaspect=no --loop ~/Pictures/wallpapers/waterfall.gif
 
 # Window Config
-for_window [class="Thunar"] border pixel 0
-for_window [class="Firefox"] border pixel 0
-for_window [class="Chromium"] border pixel 0
-for_window [class="kitty"] border pixel 0
-for_window [class="qutebrowser"] border pixel 0
+for_window [class="^.*"] border pixel 0
 for_window [class="Catfish"] floating enable
 
 
