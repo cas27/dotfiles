@@ -162,10 +162,11 @@ set splitright
 
 noremap <leader>f :NERDTreeToggle<CR>
 noremap <leader>t :terminal mix test<CR>
-noremap <leader>r :terminal bin/rspec<CR>
-noremap <leader>x :bd!<CR> 
+noremap <leader>r :terminal bin/rspec --format documentation<CR>
+noremap <leader>rm :terminal bin/rspec spec/models --format documentation<CR>
+noremap <leader>x :bd!<CR>
 noremap <leader>i :IEx<CR>
-noremap <leader>a :Ack 
+noremap <leader>a :Ack
 noremap <CR> :noh<CR>
 inoremap fd <Esc>
 set pastetoggle=<F2>
