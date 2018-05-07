@@ -17,7 +17,7 @@ call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/neosnippet-snippets')
 call dein#add('tpope/vim-fugitive')
 call dein#add('ctrlpvim/ctrlp.vim')
-call dein#add('flazz/vim-colorschemes')
+call dein#add('drewtempelmeyer/palenight.vim')
 call dein#add('scrooloose/nerdtree')
 call dein#add('slashmili/alchemist.vim')
 call dein#add('Shougo/deoplete.nvim')
@@ -107,8 +107,14 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
 
 " Neovim Conf
 set guifont=FuraCode\ Nerd\ Font\ Mono\ 13
-"set termguicolors
 set clipboard+=unnamedplus
+if (has("nvim"))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
+if (has("termguicolors"))
+  set termguicolors
+endif
 
 " NerdTREE Conf
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -133,8 +139,8 @@ set ignorecase smartcase "ignore case when searching
 set wrapscan "search from top when hit bottom
 set cursorline
 set lazyredraw
-colorscheme molokai
-"colorscheme OceanicNext
+"colorscheme molokai
+colorscheme palenight
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
 "Restore cursor to file position in previous editing session
