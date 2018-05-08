@@ -162,7 +162,7 @@ set splitright
 
 noremap <leader>f :NERDTreeToggle<CR>
 noremap <leader>t :terminal mix test<CR>
-noremap <leader>r :terminal bin/rspec --format documentation<CR>
+noremap <leader>r :terminal bin/rspec --format progress<CR>
 noremap <leader>rm :terminal bin/rspec spec/models --format documentation<CR>
 noremap <leader>rf :terminal bin/rspec % --format documentation<CR>
 noremap <leader>x :bd!<CR>
