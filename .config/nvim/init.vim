@@ -185,7 +185,7 @@ noremap <leader>rf :call RSpec("file")<CR>
 noremap <leader>x :bd!<CR>
 noremap <leader>i :IEx<CR>
 noremap <leader>a :Ack
-noremap <CR> :noh<CR>
+noremap <leader><CR> :noh<CR>
 inoremap fd <Esc>
 set pastetoggle=<F2>
 noremap <leader>q :bd<CR>
