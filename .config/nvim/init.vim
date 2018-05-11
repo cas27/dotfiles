@@ -168,9 +168,9 @@ function! RSpec(cmd)
   endif
 
   if a:cmd == 'models'
-    execute('terminal ' . rspec . ' spec/models --format documentation')
+    execute('terminal ' . rspec . ' spec/models --format doc')
   elseif a:cmd == 'file'
-    execute('terminal ' . rspec . ' % --format documentation')
+    execute('terminal ' . rspec . ' % --format doc')
   else
     execute('terminal ' . rspec . ' --format progress')
   endif
