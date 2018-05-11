@@ -160,11 +160,28 @@ let g:ctrlp_custom_ignore = {
 set splitbelow
 set splitright
 
+" Rspec runner
+function! RSpec(cmd)
+  let rspec = 'rspec'
+  if executable('bin/rspec')
+    let rspec = 'bin/rspec'
+  endif
+
+  if a:cmd == 'models'
+    execute('terminal ' . rspec . ' spec/models --format documentation')
+  elseif a:cmd == 'file'
+    execute('terminal ' . rspec . ' % --format documentation')
+  else
+    execute('terminal ' . rspec . ' --format progress')
+  endif
+endfunction
+
+
 noremap <leader>f :NERDTreeToggle<CR>
 noremap <leader>t :terminal mix test<CR>
-noremap <leader>r :terminal bin/rspec --format progress<CR>
-noremap <leader>rm :terminal bin/rspec spec/models --format documentation<CR>
-noremap <leader>rf :terminal bin/rspec % --format documentation<CR>
+noremap <leader>r :call RSpec("all")<CR>
+noremap <leader>rm :call RSpec("models")<CR>
+noremap <leader>rf :call RSpec("file")<CR>
 noremap <leader>x :bd!<CR>
 noremap <leader>i :IEx<CR>
 noremap <leader>a :Ack
