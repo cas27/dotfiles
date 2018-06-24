@@ -16,7 +16,6 @@ call dein#add('sheerun/vim-polyglot')
 call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/neosnippet-snippets')
 call dein#add('tpope/vim-fugitive')
-call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('drewtempelmeyer/palenight.vim')
 call dein#add('scrooloose/nerdtree')
 call dein#add('slashmili/alchemist.vim')
@@ -32,10 +31,11 @@ call dein#add('chrisbra/Colorizer')
 call dein#add('ryanoasis/vim-devicons')
 call dein#add('neomake/neomake')
 "call dein#add('ludovicchabant/vim-gutentags')
-call dein#add('zhaocai/GoldenView.Vim')
+"call dein#add('zhaocai/GoldenView.Vim')
 call dein#add('vimwiki/vimwiki.git')
 call dein#add('KabbAmine/zeavim.vim')
 call dein#add('mileszs/ack.vim')
+call dein#add('cloudhead/neovim-fuzzy')
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently install them.
@@ -97,6 +97,7 @@ let g:deoplete#enable_at_startup = 1
 "let g:gutentags_cache_dir = '~/.tags_cache'
 
 " Neomake Conf
+let g:neomake_elixir_enabled_makers = ['credo']
 autocmd! BufWritePost * Neomake
 
 " UltiNipsConf
@@ -149,13 +150,6 @@ hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 " :help last-position-jump
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
-map <Leader>b :CtrlPBuffer<CR>
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v\c(node_modules|_build|deps|vendor|\.git|\.svn)$',
-    \ 'file': '\v\c\.(swf|bak|png|gif|mov|ico|jpg|pdf|jrxml)$',
-    \}
-
 " Set terminals to split below and right
 set splitbelow
 set splitright
@@ -176,9 +170,11 @@ function! RSpec(cmd)
   endif
 endfunction
 
-
+noremap <c-p> :FuzzyOpen<CR>
+noremap <leader>s :FuzzyGrep 
 noremap <leader>f :NERDTreeToggle<CR>
 noremap <leader>t :terminal mix test<CR>
+noremap <leader>tf :terminal mix test %<CR>
 noremap <leader>r :call RSpec("all")<CR>
 noremap <leader>rm :call RSpec("models")<CR>
 noremap <leader>rf :call RSpec("file")<CR>
@@ -206,7 +202,7 @@ map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove<cr>
 
 " Autoformat Elixir files on save
-autocmd BufWritePost *.exs silent :!mix format %
-autocmd BufWritePost *.ex silent :!mix format %
+"autocmd BufWritePost *.exs silent :!mix format %
+"autocmd BufWritePost *.ex silent :!mix format %
 autocmd BufWritePost *.exs silent :e
 autocmd BufWritePost *.ex silent :e

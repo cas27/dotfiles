@@ -94,6 +94,7 @@ test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 export PATH="$(yarn global bin):$PATH"
 source ~/.keys
 source /usr/share/nvm/init-nvm.sh
+export PATH=$HOME/.bin:$PATH
 
 # save path on cd
 function cd {

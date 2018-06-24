@@ -121,7 +121,7 @@ exec --no-startup-id numlockx on
 exec --no-startup-id compton -f -b
 #exec --no-startup-id dropbox
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/moon.jpg
-#exec --no-startup-id xwinwrap -ov -ni -fs -- mpv -vo x11 -wid WID --keepaspect=no --loop ~/Pictures/wallpapers/waterfall.gif
+#exec --no-startup-id xwinwrap -ov -ni -fs -- mpv -vo x11 -wid WID --keepaspect=no --loop ~/Pictures/wallpapers/observe.gif
 
 # Window Config
 for_window [class="^.*"] border pixel 0
