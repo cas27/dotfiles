@@ -122,10 +122,15 @@ exec --no-startup-id compton -f -b
 #exec --no-startup-id dropbox
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/moon.jpg
 #exec --no-startup-id xwinwrap -ov -ni -fs -- mpv -vo x11 -wid WID --keepaspect=no --loop ~/Pictures/wallpapers/observe.gif
+exec --no-startup-id kitty --name ks -c=$HOME/.config/kitty/scratch.conf
+for_window [instance="ks"] floating enable, move scratchpad, scratchpad show;
+for_window [instance="ks"] resize grow left -150, resize grow right -150, resize grow down -300, resize grow up -300, move scratchpad;
+bindsym $mod+t [instance="ks"] scratchpad show
 
 # Window Config
 for_window [class="^.*"] border pixel 0
 for_window [class="Catfish"] floating enable
+for_window [instance="ks"] border pixel 4
 
 
 # resize window (you can also use the mouse for that)
