@@ -30,7 +30,7 @@ call dein#add('powerman/vim-plugin-AnsiEsc')
 call dein#add('chrisbra/Colorizer')
 call dein#add('ryanoasis/vim-devicons')
 call dein#add('neomake/neomake')
-"call dein#add('ludovicchabant/vim-gutentags')
+call dein#add('ludovicchabant/vim-gutentags')
 "call dein#add('zhaocai/GoldenView.Vim')
 call dein#add('vimwiki/vimwiki.git')
 call dein#add('KabbAmine/zeavim.vim')
@@ -94,7 +94,7 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 let g:deoplete#enable_at_startup = 1
 
 " Gutentags Conf
-"let g:gutentags_cache_dir = '~/.tags_cache'
+let g:gutentags_cache_dir = '~/.tags_cache'
 
 " Neomake Conf
 let g:neomake_elixir_enabled_makers = ['credo']
