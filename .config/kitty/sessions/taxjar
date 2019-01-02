@@ -1,0 +1,5 @@
+layout grid
+
+cd ~/code/apps/taxjar
+
+launch zsh -c rails s

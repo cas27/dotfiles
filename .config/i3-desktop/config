@@ -82,6 +82,9 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# lock the screen
+bindsym $mod+shift+z exec betterlockscreen -l dim
+
 # switch to workspace
 bindsym $mod+1 workspace $wrk1
 bindsym $mod+2 workspace $wrk2
@@ -114,23 +117,23 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Application Startup
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id betterlockscreen -w dim
 exec --no-startup-id /usr/bin/vmware-user-suid-wrapper #for virutal machines
 exec --no-startup-id /usr/bin/lxqt-policykit-agent #auth requests
+exec --no-startup-id $HOME/.scripts/hotplug_monitor.sh
 exec --no-startup-id numlockx on
 exec --no-startup-id compton -f -b
-#exec --no-startup-id dropbox
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/moon.jpg
 #exec --no-startup-id xwinwrap -ov -ni -fs -- mpv -vo x11 -wid WID --keepaspect=no --loop ~/Pictures/wallpapers/observe.gif
 exec --no-startup-id kitty --name ks -c=$HOME/.config/kitty/scratch.conf
-for_window [instance="ks"] floating enable, move scratchpad, scratchpad show;
-for_window [instance="ks"] resize grow right -200, resize grow left -200, resize grow down -300, resize grow up -300, move scratchpad;
+for_window [instance="ks"] floating enable, move scratchpad;
+#for_window [instance="ks"] resize grow right 200, resize grow left 200, resize grow down 300, resize grow up 300, move scratchpad;
 bindsym $mod+t [instance="ks"] scratchpad show
 
 # Window Config
 for_window [class="^.*"] border pixel 0
 for_window [class="Catfish"] floating enable
 for_window [instance="ks"] border pixel 4
+for_window [class="zoom"] floating enable
 
 
 # resize window (you can also use the mouse for that)
@@ -154,44 +157,46 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+#exec --no-startup-id polybar example
+exec --no-startup-id $HOME/.scripts/launch_polybar.sh
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-  i3bar_command i3bar -t
-  status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
-
-  colors {
-    background #1b1d1f
-    statusline #9e958e
-    separator  #081419
-    focused_workspace  #253941 #253941 #e7dfd9
-    inactive_workspace #08202a #08202a #9e958e
-    urgent_workspace   #1b1d1f #c6a78a #000000
-  }
-}
+#bar {
+  #i3bar_command i3bar -t
+  #status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
+#
+  #colors {
+    #background #1b1d1f
+    #statusline #9e958e
+    #separator  #081419
+    #focused_workspace  #253941 #253941 #e7dfd9
+    #inactive_workspace #08202a #08202a #9e958e
+    #urgent_workspace   #1b1d1f #c6a78a #000000
+  #}
+#}
 
 ################################################################
 #                         border  backgr  text     indicator child_border
-client.focused		 	      #1d3037 #000000 #ffffff  #ffffff   #1d3037
+client.focused		 	      #000000 #000000 #eeeeee  #eeeeee   #1d3037
 client.focused_inactive 	#1d2121 #1d2121 #a1a1a1  #484e50   #1d2121
 client.unfocused 		      #272727 #272727 #fdfdfd  #bfbfbf   #272727
-client.urgent   		      #4a4b4c #4a4b4c #fdfdfd  #fbfbfb   #4a4c4b
-client.placeholder     		#000000 #0c0c0c #ffffff  #000000   #0c0c0c
+client.urgent   		      #4a4b4c #4a4b4c #eeeeee  #fbfbfb   #4a4c4b
+client.placeholder     		#000000 #0c0c0c #eeeeee  #000000   #0c0c0c
 
-client.background       	#111111
+client.background       	#ffffdd
 
 ################################################################
 
 #::::::::::::::::::: Settings for i3-gaps :::::::::::::::::::::#
 ################################################################
 # Set inner/outer gaps
-set $default_gaps_inner 15
-set $default_gaps_outer -4
+set $default_gaps_inner 12
+set $default_gaps_outer -1
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
 
-smart_borders on
-smart_gaps on
+#smart_borders on
+#smart_gaps on
 
 # Bindings
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume

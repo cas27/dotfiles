@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="avit"
+ZSH_THEME="philips"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,7 +51,7 @@ ZSH_THEME="avit"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z mix)
+plugins=(git z mix zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.profile
@@ -87,14 +87,23 @@ fi
 alias vi=nvim
 alias vim=nvim
 alias start="nvim ~/vimwiki/Morning\ Checklist.wiki"
+alias d="kitty +kitten diff"
+alias i="iex"
+alias im="iex -S mix"
+alias imp="iex -S mix phx.server"
+alias h="cd ~"
+alias t="gotop -c default-dark"
 
 export ERL_AFLAGS="-kernel shell_history enabled"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
-export PATH="$(yarn global bin):$PATH"
 source ~/.keys
 source /usr/share/nvm/init-nvm.sh
 export PATH=$HOME/.bin:$PATH
+export PATH="$(yarn global bin):$PATH"
+
+# Elixir & Erlang Version Manager
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
 
 # save path on cd
 function cd {

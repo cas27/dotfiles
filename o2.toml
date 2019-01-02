@@ -1,0 +1,68 @@
+[macros.install__arch]
+  prefix = ["sudo", "pacman", "-S"]
+
+[macros.install__ubuntu]
+  prefix = ["sudo", "apt-get", "install", "-y"]
+
+[macros.clone]
+  prefix = ["git", "clone"]
+
+[tasks.desktop]
+  deps = ["common", "nodejs"]
+
+[tasks.common]
+  links = [
+    [".config/i3", ".config/i3-desktop"],
+    [".profile"],
+    [".Xresources"],
+    [".config/nvim"],
+    [".config/kitty"],
+    [".zshrc"],
+    [".ctags"],
+    [".gitconfig"],
+    [".gitignore_global"]
+  ]
+
+[tasks.nodejs]
+  rejects = [["which", "node"]]
+  cmds = [["@install", "nodejs", "npm"]]
+
+[tasks.neovim]
+  rejects = [["which", "nvim"]]
+  cmds = [["@install", "neovim"]]
+
+[tasks.zsh]
+  rejects = [["which", "zsh"]]
+  cmds = [
+    ["@clone", "git://github.com/robbyrussell/oh-my-zsh.git", "./.oh-my-zsh"]
+  ]
+
+[tasks.bootstrap__arch]
+  deps = ["yay"]
+  cmds = [
+    ["@install", "rofi", "python3", "xdg-utils", "xorg-xprop", "ruby", "xorg-xrdb"],
+    ["@install", "unzip", "arc-gtk-theme", "lxappearance", "compton", "lxqt-policykit", "kitty", "thunar"],
+    ["@install", "inotify-tools", "catfish", "mlocate", "sysstat", "xclip", "numlockx", "ack"],
+    ["yay", "i3-gaps", "otf-nerd-fonts-fira-code", "fyz"],
+    ["yay", "i3blocks-gaps-git", "python2-pip"],
+    ["sudo", "pip3", "install", "--upgrade", "pip"],
+    ["sudo", "pip2", "install", "neovim"],
+    ["sudo", "pip3", "install", "neovim"],
+    ["gem", "install", "neovim"],
+    ["fc-cache", "-vf", ".fonts"]
+  ]
+
+[tasks.yaourt]
+  rejects = [["which", "yaourt"]]
+  cmds = [
+    ["@install", "wget"],
+    ["wget", "-P", "bt-tmp/", "https://aur.archlinux.org/cgit/aur.git/snapshot/package-query.tar.gz"],
+    ["tar", "xfz", "bt-tmp/package-query.tar.gz", "-C", "bt-tmp/"],
+    ["sh", "-c", "cd bt-tmp/package-query && makepkg"],
+    ["sudo", "sh", "-c", "pacman -U bt-tmp/package-query/package-query*.pkg.tar.xz"],
+    ["wget", "-P", "bt-tmp/", "https://aur.archlinux.org/cgit/aur.git/snapshot/yaourt.tar.gz"],
+    ["tar", "xfz", "bt-tmp/yaourt.tar.gz", "-C", "bt-tmp/"],
+    ["sh", "-c", "cd bt-tmp/yaourt && makepkg"],
+    ["sudo", "sh", "-c", "pacman -U bt-tmp/yaourt/yaourt*.pkg.tar.xz"],
+    ["rm", "-rf", "bt-tmp/"]
+  ]

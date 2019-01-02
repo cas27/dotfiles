@@ -17,6 +17,7 @@ call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/neosnippet-snippets')
 call dein#add('tpope/vim-fugitive')
 call dein#add('drewtempelmeyer/palenight.vim')
+call dein#add('sonph/onehalf', {'rtp': 'vim'})
 call dein#add('scrooloose/nerdtree')
 call dein#add('slashmili/alchemist.vim')
 call dein#add('Shougo/deoplete.nvim')
@@ -30,12 +31,16 @@ call dein#add('powerman/vim-plugin-AnsiEsc')
 call dein#add('chrisbra/Colorizer')
 call dein#add('ryanoasis/vim-devicons')
 call dein#add('neomake/neomake')
-call dein#add('ludovicchabant/vim-gutentags')
+"call dein#add('ludovicchabant/vim-gutentags')
 "call dein#add('zhaocai/GoldenView.Vim')
 call dein#add('vimwiki/vimwiki.git')
 call dein#add('KabbAmine/zeavim.vim')
-call dein#add('mileszs/ack.vim')
 call dein#add('cloudhead/neovim-fuzzy')
+"call dein#add('majutsushi/tagbar')
+call dein#add('MattesGroeger/vim-bookmarks')
+call dein#add('wsdjeg/FlyGrep.vim')
+call dein#add('jsfaint/gen_tags.vim')
+call dein#add('tpope/vim-commentary')
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently install them.
@@ -66,7 +71,7 @@ set hidden
 let g:Powerline_symbols = 'fancy'
 let g:airline_left_alt_sep = ''
 let g:airline_right_alt_sep = ''
-let g:airline_theme='kolor'
+let g:airline_theme='onehalfdark'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_tab_nr = 1
@@ -89,6 +94,25 @@ nmap <leader>6 <Plug>AirlineSelectTab6
 nmap <leader>7 <Plug>AirlineSelectTab7
 nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
+
+" TagBar
+let g:tagbar_type_elixir = {
+    \ 'ctagstype' : 'elixir',
+    \ 'kinds' : [
+        \ 'f:functions',
+        \ 'functions:functions',
+        \ 'c:callbacks',
+        \ 'd:delegates',
+        \ 'e:exceptions',
+        \ 'i:implementations',
+        \ 'a:macros',
+        \ 'o:operators',
+        \ 'm:modules',
+        \ 'p:protocols',
+        \ 'r:records',
+        \ 't:tests'
+    \ ]
+\ }
 
 " Deoplete Conf
 let g:deoplete#enable_at_startup = 1
@@ -114,6 +138,8 @@ if (has("nvim"))
 endif
 
 if (has("termguicolors"))
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
 
@@ -133,15 +159,16 @@ set autoindent
 set smartindent
 set autoread
 set scrolloff=5
-set background=dark
+set background=light
 set hlsearch "highlight search
 set incsearch
 set ignorecase smartcase "ignore case when searching
 set wrapscan "search from top when hit bottom
 set cursorline
 set lazyredraw
-"colorscheme molokai
-colorscheme palenight
+set noswapfile
+"colorscheme palenight
+colorscheme onehalflight
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
 "Restore cursor to file position in previous editing session
@@ -171,7 +198,8 @@ function! RSpec(cmd)
 endfunction
 
 noremap <c-p> :FuzzyOpen<CR>
-noremap <leader>s :FuzzyGrep 
+noremap <leader>S :FuzzyGrep 
+noremap <leader>s :FlyGrep<CR>
 noremap <leader>f :NERDTreeToggle<CR>
 noremap <leader>t :terminal mix test<CR>
 noremap <leader>tf :terminal mix test %<CR>
@@ -192,8 +220,8 @@ map <Leader>p :call dein#update()<CR>
 nnoremap <leader><leader> <c-^> :syntax reset<CR>:syntax on<CR>
 
 " To save, ctrl-s.
-nmap <c-s> :w<CR>
-imap <c-s> <Esc>:w<CR>a
+nnoremap <c-s> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> :w<CR>
+imap <c-s> <Esc> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> :w<CR>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>

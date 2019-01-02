@@ -5,3 +5,19 @@
 
 [core]
   excludesfile = ~/.gitignore_global
+
+[diff]
+    tool = kitty
+    guitool = kitty.gui
+[difftool]
+    prompt = false
+    trustExitCode = true
+[difftool "kitty"]
+    cmd = kitty +kitten diff $LOCAL $REMOTE
+[difftool "kitty.gui"]
+    cmd = kitty kitty +kitten diff $LOCAL $REMOTE
+
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+[url "ssh://git@bitbucket.org/"]
+  insteadOf = https://bitbucket.org/
