@@ -93,6 +93,8 @@ alias im="iex -S mix"
 alias imp="iex -S mix phx.server"
 alias h="cd ~"
 alias t="gotop -c default-dark"
+alias view_tax_rules="cmatrix"
+alias ls="exa --long --header --git"
 
 export ERL_AFLAGS="-kernel shell_history enabled"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

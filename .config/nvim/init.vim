@@ -181,19 +181,36 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 set splitbelow
 set splitright
 
-" Rspec runner
-function! RSpec(cmd)
-  let rspec = 'rspec'
-  if executable('bin/rspec')
-    let rspec = 'bin/rspec'
+" Test runner
+function! TestRunner(type)
+  let ext= expand('%:e')
+  let cmd='mix'
+  let sub_cmd=''
+
+  if ext == 'rb'
+    let cmd = 'rspec'
+    let sub_cmd = ' --format doc'
+    if executable('bin/rspec')
+      let cmd = 'bin/rspec'
+    endif
+  elseif ext == 'exs'
+    let cmd = 'mix test'
   endif
 
-  if a:cmd == 'models'
-    execute('terminal ' . rspec . ' spec/models --format doc')
-  elseif a:cmd == 'file'
-    execute('terminal ' . rspec . ' % --format doc')
+  if a:type == 'file'
+    let path=expand('%')
+    if finddir('apps', -1) == 'apps'
+      let path=join(split(path, '/')[2:10000], '/')
+    endif
+    execute('terminal ' . cmd . ' ' . path . ' ' . sub_cmd)
+  elseif a:type == 'line'
+    let path=expand('%')
+    if finddir('apps', -1) == 'apps'
+      let path=join(split(path, '/')[2:10000], '/')
+    endif
+    execute('terminal ' . cmd . ' ' . path . ':' . line('.') . sub_cmd)
   else
-    execute('terminal ' . rspec . ' --format progress')
+    execute('terminal ' . cmd . ' --format progress')
   endif
 endfunction
 
@@ -202,10 +219,8 @@ noremap <leader>S :FuzzyGrep
 noremap <leader>s :FlyGrep<CR>
 noremap <leader>f :NERDTreeToggle<CR>
 noremap <leader>t :terminal mix test<CR>
-noremap <leader>tf :terminal mix test %<CR>
-noremap <leader>r :call RSpec("all")<CR>
-noremap <leader>rm :call RSpec("models")<CR>
-noremap <leader>rf :call RSpec("file")<CR>
+noremap <leader>tf :call TestRunner("file")<CR>
+noremap <leader>tl :call TestRunner("line")<CR>
 noremap <leader>x :bd!<CR>
 noremap <leader>i :IEx<CR>
 noremap <leader>a :Ack
