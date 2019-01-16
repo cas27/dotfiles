@@ -202,13 +202,17 @@ function! TestRunner(type)
     if finddir('apps', -1) == 'apps'
       let path=join(split(path, '/')[2:10000], '/')
     endif
-    execute('terminal ' . cmd . ' ' . path . ' ' . sub_cmd)
+    let exec_cmd = 'terminal ' . cmd . ' ' . path . ' ' . sub_cmd
+    execute(':noremap <leader>tt :' . exec_cmd . '<CR>')
+    execute(exec_cmd)
   elseif a:type == 'line'
     let path=expand('%')
     if finddir('apps', -1) == 'apps'
       let path=join(split(path, '/')[2:10000], '/')
     endif
-    execute('terminal ' . cmd . ' ' . path . ':' . line('.') . sub_cmd)
+    let exec_cmd = 'terminal ' . cmd . ' ' . path . ':' . line('.') . sub_cmd
+    execute(':noremap <leader>tt :' . exec_cmd . '<CR>')
+    execute(exec_cmd)
   else
     execute('terminal ' . cmd . ' --format progress')
   endif
