@@ -51,7 +51,7 @@ ZSH_THEME="philips"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z mix zsh-syntax-highlighting)
+plugins=(git z mix zsh-syntax-highlighting vi-mode fancy-ctrl-z)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.profile
@@ -120,3 +120,27 @@ fi
 
 # reset back to home on exiting terminal
 trap "[ -f ~/.last_dir ] && rm ~/.last_dir" EXIT
+
+# Zsh Vim Mode
+bindkey -v
+export KEYTIMEOUT=1
+
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+
+function zle-line-init zle-keymap-select {
+    VIM_PROMPT="%{$fg_bold[red]%} [% NORMAL]%  %{$reset_color%}"
+    RPROMPT="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/}[%*]"
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+# End Zsh Mode
