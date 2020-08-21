@@ -102,6 +102,9 @@ source ~/.keys
 source /usr/share/nvm/init-nvm.sh
 export PATH=$HOME/.bin:$PATH
 export PATH="$(yarn global bin):$PATH"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
+#export PAGER="pspg -s 0"
 
 # Elixir & Erlang Version Manager
 . $HOME/.asdf/asdf.sh
@@ -144,3 +147,8 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 # End Zsh Mode
+
+# Theme for bat (used in fzf preview window inside vim)
+export BAT_THEME=OneHalfLight
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

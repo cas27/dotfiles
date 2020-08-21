@@ -82,8 +82,14 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# launch nemo file brower
+bindsym $mod+n exec nemo
+
+# take a screen shot
+bindsym $mod+Shift+s exec --no-startup-id flameshot gui
+
 # lock the screen
-bindsym $mod+shift+z exec betterlockscreen -l dim
+bindsym $mod+Shift+z exec --no-startup-id i3lock-fancy-dualmonitor
 
 # switch to workspace
 bindsym $mod+1 workspace $wrk1
@@ -117,16 +123,17 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Application Startup
-exec --no-startup-id betterlockscreen -w dim
+exec --no-startup-id $HOME/.bin/lock.sh
 exec --no-startup-id /usr/bin/vmware-user-suid-wrapper #for virutal machines
 exec --no-startup-id /usr/bin/lxqt-policykit-agent #auth requests
 exec --no-startup-id $HOME/.scripts/hotplug_monitor.sh
 exec --no-startup-id numlockx on
-exec --no-startup-id compton -f -b
+exec --no-startup-id allow_rgb10_configs=false compton --config ~/.config/compton/compton.conf -b -f
+exec --no-startup-id watchexec -w vimwiki rclone sync /home/corys/vimwiki Dropbox:/wiki
 #exec --no-startup-id xwinwrap -ov -ni -fs -- mpv -vo x11 -wid WID --keepaspect=no --loop ~/Pictures/wallpapers/observe.gif
 exec --no-startup-id kitty --name ks -c=$HOME/.config/kitty/scratch.conf
 for_window [instance="ks"] floating enable, move scratchpad;
-#for_window [instance="ks"] resize grow right 200, resize grow left 200, resize grow down 300, resize grow up 300, move scratchpad;
+for_window [instance="ks"] resize grow right 200, resize grow left 200, resize grow down 300, resize grow up 300, move scratchpad;
 bindsym $mod+t [instance="ks"] scratchpad show
 
 # Window Config
@@ -134,7 +141,6 @@ for_window [class="^.*"] border pixel 0
 for_window [class="Catfish"] floating enable
 for_window [instance="ks"] border pixel 4
 for_window [class="zoom"] floating enable
-
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -202,3 +208,7 @@ gaps outer $default_gaps_outer
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
+
+# Bind Backlight with light
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5

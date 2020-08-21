@@ -5,6 +5,7 @@
 
 [core]
   excludesfile = ~/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [diff]
     tool = kitty
@@ -17,7 +18,7 @@
 [difftool "kitty.gui"]
     cmd = kitty kitty +kitten diff $LOCAL $REMOTE
 
-[url "ssh://git@github.com/"]
+[url "git@github.com:"]
   insteadOf = https://github.com/
 [url "ssh://git@bitbucket.org/"]
   insteadOf = https://bitbucket.org/
