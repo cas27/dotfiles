@@ -23,6 +23,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'psliwka/vim-smoothie'                           " smooth ctrl-d ctrl-u
   Plug 'elixir-lsp/elixir-ls', { 'do': { -> g:ElixirLS.compile() } }
   Plug 'neoclide/coc.nvim', {'branch': 'release'}       " Intellisense engine
+  Plug 'tpope/vim-commentary'                           " comment code lines
+  Plug 'honza/vim-snippets'                             " snippets
 
 call plug#end()
 

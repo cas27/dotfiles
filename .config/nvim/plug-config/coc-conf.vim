@@ -1,4 +1,4 @@
-let g:coc_global_extensions = ['coc-elixir', 'coc-diagnostic']
+let g:coc_global_extensions = ['coc-elixir', 'coc-diagnostic', 'coc-snippets']
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -31,6 +31,13 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" Snippets
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
 
 " Explorer
 let g:coc_explorer_global_presets = {
