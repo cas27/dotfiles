@@ -25,7 +25,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}       " Intellisense engine
   Plug 'tpope/vim-commentary'                           " comment code lines
   Plug 'honza/vim-snippets'                             " snippets
-
+  Plug 'justinmk/vim-sneak'                             " Text Navigation
+  Plug 'stsewd/fzf-checkout.vim'                        " Checkout branches with fzf
 call plug#end()
 
 " Automatically install missing plugins on startup

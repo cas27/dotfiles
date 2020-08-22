@@ -101,7 +101,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 source ~/.keys
 source /usr/share/nvm/init-nvm.sh
 export PATH=$HOME/.bin:$PATH
-export PATH="$(yarn global bin):$PATH"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 #export PAGER="pspg -s 0"
