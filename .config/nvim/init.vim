@@ -16,3 +16,4 @@ source $HOME/.config/nvim/plug-config/xtabline.vim
 source $HOME/.config/nvim/plug-config/coc-conf.vim
 source $HOME/.config/nvim/plug-config/sneak.vim
 source $HOME/.config/nvim/plug-config/checkout.vim
+source $HOME/.config/nvim/plug-config/autopairs.vim
