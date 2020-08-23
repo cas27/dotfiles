@@ -36,7 +36,6 @@ let g:which_key_map.t = {
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
       \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
-      \ 't' : [':FloatermToggle'                                , 'toggle'],
       \ }
 
 " g is for git
