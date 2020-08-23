@@ -39,3 +39,4 @@ set guifont=FuraCode\ Nerd\ Font\ Mono\ 13
 
 "Restore cursor to file position in previous editing session
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+

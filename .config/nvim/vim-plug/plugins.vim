@@ -9,7 +9,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'ryanoasis/vim-devicons'                         " adds cool icons to file types
   Plug 'sheerun/vim-polyglot'                           " syntax support for all the languages
-  Plug 'sonph/onehalf', {'rtp': 'vim'}                  " onehalf theme
   Plug 'jiangmiao/auto-pairs'                           " Auto pairs for '(' '[' '{'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }   " searching all the things
   Plug 'junegunn/fzf.vim'                               " searching all the things
@@ -27,6 +26,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'honza/vim-snippets'                             " snippets
   Plug 'justinmk/vim-sneak'                             " Text Navigation
   Plug 'stsewd/fzf-checkout.vim'                        " Checkout branches with fzf
+
+  " themes
+  Plug 'morhetz/gruvbox'
+  Plug 'sonph/onehalf', {'rtp': 'vim'}
+  Plug 'reedes/vim-colors-pencil'
 call plug#end()
 
 " Automatically install missing plugins on startup
