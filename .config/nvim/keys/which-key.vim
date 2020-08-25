@@ -52,14 +52,14 @@ let g:which_key_map.t = {
 " g is for git
 let g:which_key_map.g = {
       \ 'name' : '+terminal' ,
-      \ 'a' : [':Git add .'        , 'add all'],
-      \ 'b' : [':Git blame'        , 'blame'],
-      \ 'c' : [':GCheckout'        , 'checkout'],
-      \ 's' : [':G'                , 'status'],
-      \ 'l' : [':Git log'          , 'log'],
-      \ 'C' : [':Git commit'       , 'commit'],
-      \ 'p' : [':Git push'         , 'push'],
-      \ 'P' : [':Git pull'         , 'pull'],
+      \ 'a' : [':Git add .'            , 'add all'],
+      \ 'b' : [':Git blame'            , 'blame'],
+      \ 'c' : [':GCheckout'            , 'checkout'],
+      \ 's' : [':G'                    , 'status'],
+      \ 'l' : [':Git log'              , 'log'],
+      \ 'C' : [':Git commit'           , 'commit'],
+      \ 'p' : [':FloatermNew git push' , 'push'],
+      \ 'P' : [':Git pull'             , 'pull'],
       \ }
 
 " Register which key map
