@@ -15,9 +15,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'liuchengxu/vim-which-key'                       " see your key bindings
   Plug 'voldikss/vim-floaterm'                          " floating term
   Plug 'vimwiki/vimwiki'                                " wiki for all my things
-  Plug 'mg979/vim-xtabline'                             " better tabline up top
-  Plug 'vim-airline/vim-airline'                        " status line
-  Plug 'vim-airline/vim-airline-themes'                 " airline themes
   Plug 'tpope/vim-fugitive'                             " git
   Plug 'psliwka/vim-smoothie'                           " smooth ctrl-d ctrl-u
   Plug 'elixir-lsp/elixir-ls', { 'do': { -> g:ElixirLS.compile() } }
@@ -27,6 +24,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'justinmk/vim-sneak'                             " Text Navigation
   Plug 'stsewd/fzf-checkout.vim'                        " Checkout branches with fzf
   Plug 'neomake/neomake'
+  Plug 'vim-airline/vim-airline'                        " status line
+  Plug 'vim-airline/vim-airline-themes'                 " airline themes
 
   " themes
   Plug 'morhetz/gruvbox'
