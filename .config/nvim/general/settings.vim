@@ -28,7 +28,6 @@ set updatetime=300                      " Faster completion
 set timeoutlen=400                      " time between key combos before timeout, default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set incsearch				                    " Start searching as I type
-set hlsearch				                    " Hilight what I searched for
 set ignorecase smartcase		            " ignore case when I search
 set scrolloff=5                         " Minimal number of screen lines to keep above and below the cursor
 set lazyredraw				                  " Dont redraw the screen till you have too
@@ -39,4 +38,3 @@ set guifont=FuraCode\ Nerd\ Font\ Mono\ 13
 
 "Restore cursor to file position in previous editing session
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-

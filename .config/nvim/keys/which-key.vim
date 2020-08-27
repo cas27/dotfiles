@@ -22,9 +22,9 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 " Single mappings
-let g:which_key_map['p'] = [ ':Files'                             , 'search files' ]
+let g:which_key_map['p'] = [ ':GFiles'                             , 'search files' ]
 let g:which_key_map['s'] = [ ':Rg'                                , 'search text' ]
-let g:which_key_map['x'] = [ ':XTabCloseBuffer'                   , 'close buffer' ]
+let g:which_key_map['x'] = [ ':bdelete'                           , 'close buffer' ]
 let g:which_key_map['f'] = [ ':CocCommand explorer'               , 'file explorer' ]
 
 "Buffers
@@ -55,6 +55,7 @@ let g:which_key_map.g = {
       \ 'a' : [':Git add .'            , 'add all'],
       \ 'b' : [':Git blame'            , 'blame'],
       \ 'c' : [':GCheckout'            , 'checkout'],
+      \ 'd' : [':GFiles?'              , 'changes'],
       \ 's' : [':G'                    , 'status'],
       \ 'l' : [':Git log'              , 'log'],
       \ 'C' : [':Git commit'           , 'commit'],

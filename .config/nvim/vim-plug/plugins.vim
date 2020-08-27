@@ -23,7 +23,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'honza/vim-snippets'                             " snippets
   Plug 'justinmk/vim-sneak'                             " Text Navigation
   Plug 'stsewd/fzf-checkout.vim'                        " Checkout branches with fzf
-  Plug 'neomake/neomake'
+  Plug 'neomake/neomake'                                " linter
   Plug 'vim-airline/vim-airline'                        " status line
   Plug 'vim-airline/vim-airline-themes'                 " airline themes
 
