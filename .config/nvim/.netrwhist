@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/corys/code/scripts/for_the_ralm/for-the-realm-filing-issues'
+let g:netrw_dirhist_6='/home/corys/code/apps/ex_smartcalcs/apps/ex_smartcalcs/config'
+let g:netrw_dirhist_5='/home/corys/code/apps/ex_smartcalcs/apps/ex_smartcalcs'
+let g:netrw_dirhist_4='/home/corys/code/apps/ex_smartcalcs/apps'
+let g:netrw_dirhist_3='/home/corys/code/apps/ex_smartcalcs'
+let g:netrw_dirhist_2='/home/corys/code/apps/ex_smartcalcs/config'
+let g:netrw_dirhist_1='/home/corys/code/apps/ex_smartcalcs'

@@ -26,6 +26,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'neomake/neomake'                                " linter
   Plug 'vim-airline/vim-airline'                        " status line
   Plug 'vim-airline/vim-airline-themes'                 " airline themes
+  Plug 'ludovicchabant/vim-gutentags'                   " ctags
 
   " themes
   Plug 'morhetz/gruvbox'
